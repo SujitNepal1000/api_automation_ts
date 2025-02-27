@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-02-27T11:28:33.366Z",
+    "end": "2025-02-27T11:28:33.731Z",
+    "duration": 365,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "320f6bf8-4cc4-439c-a436-b639d31f5d98",
+      "title": "",
+      "fullFile": "C:\\Users\\HP\\Desktop\\api automation\\api_automation_ts\\tests\\auth\\loginTest.ts",
+      "file": "\\tests\\auth\\loginTest.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3fe59fa3-cf69-4129-a0d6-1a7e9749c788",
+          "title": "Login API Authentication tests",
+          "fullFile": "C:\\Users\\HP\\Desktop\\api automation\\api_automation_ts\\tests\\auth\\loginTest.ts",
+          "file": "\\tests\\auth\\loginTest.ts",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login successfully and return status 200 with a token",
+              "fullTitle": "Login API Authentication tests should login successfully and return status 200 with a token",
+              "timedOut": false,
+              "duration": 354,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const client = new APIClient(\"admin\");\nconst loginEndpoint = \"/api/auth/login\";\n// Make the API call to login\nconst response = await client.post(loginEndpoint, {\n    username: \"adminUser\",\n    password: \"Admin@123\"\n});\n// Validate response is not null and has status 200\nexpect(response).to.not.be.null;\nexpect(response.status).to.equal(200);\n// Validate the response data contains a token and success is true\nexpect(response.data).to.have.property(\"token\");\nexpect(response.data.success).to.equal(true);",
+              "err": {
+                "message": "AxiosError: Request failed with status code 404",
+                "estack": "AxiosError: Request failed with status code 404\n    at settle (file:///C:/Users/HP/Desktop/api%20automation/api_automation_ts/node_modules/axios/lib/core/settle.js:19:12)\n    at Unzip.handleStreamEnd (file:///C:/Users/HP/Desktop/api%20automation/api_automation_ts/node_modules/axios/lib/adapters/http.js:599:11)\n    at Unzip.emit (node:events:526:35)\n    at endReadableNT (node:internal/streams/readable:1408:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n    at Axios.request (file:///C:/Users/HP/Desktop/api%20automation/api_automation_ts/node_modules/axios/lib/core/Axios.js:45:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///C:/Users/HP/Desktop/api%20automation/api_automation_ts/tests/auth/loginTest.ts:10:26)",
+                "diff": null
+              },
+              "uuid": "5f2ad9a3-82d3-4a21-a5c0-077ec609d380",
+              "parentUUID": "3fe59fa3-cf69-4129-a0d6-1a7e9749c788",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5f2ad9a3-82d3-4a21-a5c0-077ec609d380"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 354,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 30000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
