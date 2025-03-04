@@ -13,14 +13,14 @@ interface UserCredentials {
   }
   
   export const authConfig: AuthConfig = {
-    baseUrl: "https://ens-fe-stage.yipl.com.np", // Update to your actual API URL
+    baseUrl: "https://www.example", // Update to your actual API URL your url
     users: {
       admin: {
         username: "admin@gmail.com",
-        password: "Secret@password1234"
+        password: "admin@123"
       },
       user: {
-        username: "sujit.nepal+user1@yipl.com.np",
+        username: "superadmin@gmail.com",
         password: "Admin@123"
       }
     }
